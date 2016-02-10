@@ -4,10 +4,10 @@ class CoolHttp
     extend(module_name(action))
   end
 
-  def perform(path_params=nil, body_params=nil)
+  def perform(path_params=nil, body_params=nil, query_params=nil)
     response = connection.send(http_method) do |request|
-      request.url path(path_params)
-      request.body = body(body_params).to_json
+      request.url path(path_params), query(query_params)
+      request.body = body(body_params).to_json if body_params
     end.body
     JSON.parse response
   end
@@ -15,6 +15,12 @@ class CoolHttp
 private
 
   def body(params)
+  end
+
+  def path(params)
+  end
+
+  def query(params)
   end
 
   def connection_options
