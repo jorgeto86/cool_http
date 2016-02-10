@@ -21,4 +21,4 @@ end
 class LanguagesClient < CoolHttp
 end
 
-LanguagesClient.new(:language).perform(nil, id: 1)
+LanguagesClient.new(:language).perform(id: 1)
