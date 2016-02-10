@@ -1,7 +1,7 @@
 class CoolHttp
 
   def initialize(action)
-    self.extend(module_name(action))
+    extend(module_name(action))
   end
 
   def perform(path_params=nil, body_params=nil)
