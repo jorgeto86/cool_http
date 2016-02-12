@@ -12,7 +12,7 @@ module Languages
     end
 
     def query(params=nil)
-      { params: params[:test] }
+      { params: params[:test], cosa: 'no' }
     end
   end
 end
