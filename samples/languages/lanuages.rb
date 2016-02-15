@@ -10,5 +10,9 @@ module Languages
     def path(params=nil)
       '/api/v1/languages/'
     end
+
+    def query(params=nil)
+      { params: params[:test], cosa: 'no' }
+    end
   end
 end

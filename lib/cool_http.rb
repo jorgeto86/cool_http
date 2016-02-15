@@ -1,24 +1,36 @@
 class CoolHttp
+  NO_BODY = nil
+  NO_PATH = ''
+  EMPTY = {}
 
   def initialize(action)
     extend(module_name(action))
   end
 
-  def perform(path_params=nil, body_params=nil)
+  def perform(path_params=nil, body_params=nil, query_params=nil)
     response = connection.send(http_method) do |request|
-      request.url path(path_params)
-      request.body = body(body_params).to_json
-    end.body
-    JSON.parse response
+      request.url path(path_params), query(query_params)
+      request.body = body(body_params)
+    end
+    JSON.parse response.body
   end
 
 private
 
   def body(params)
+    NO_BODY
+  end
+
+  def path(params)
+    NO_PATH
+  end
+
+  def query(params)
+    EMPTY
   end
 
   def connection_options
-    {}
+    EMPTY
   end
 
   def connection
