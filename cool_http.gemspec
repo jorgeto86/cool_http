@@ -1,5 +1,3 @@
-require "faraday"
-
 Gem::Specification.new do |s|
   s.name        = 'cool_http'
   s.version     = '1.0'
