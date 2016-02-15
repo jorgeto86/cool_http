@@ -6,7 +6,7 @@ Gem::Specification.new do |s|
   s.description = "HTTP client with encapsulated requests"
   s.authors     = ["Jorge Salcedo"]
   s.email       = 'jorgeto86@gmail.com'
-  s.files       = 'git ls-files'.split("\n")
+  s.files       = `git ls-files`.split("\n")
   s.homepage    = ''
   # s.require_paths = ["lib"]
 
