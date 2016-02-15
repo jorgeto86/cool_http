@@ -10,5 +10,5 @@ Gem::Specification.new do |s|
   s.homepage    = ''
   # s.require_paths = ["lib"]
 
-  s.add_development_dependency "faraday",  '~> 0.9.2'
+  s.add_dependency "faraday",  '~> 0.9.2'
 end
