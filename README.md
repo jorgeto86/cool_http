@@ -1,7 +1,6 @@
 (Working at...)
 
 # Cool HTTP
------------
 
 ## Installation
 ```ruby
