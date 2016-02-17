@@ -20,8 +20,8 @@ end
 
 ## Clients and Requests
 Clients and requests always have five optional methods that you can use to configurate requests. They are:
-1. Body: JSON request body.
-2. Path:
+  1. Body: JSON request body.
+  2. Path:
 
 
 (Required method)

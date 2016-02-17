@@ -12,7 +12,7 @@ class CoolHttp
   def perform(path_params=nil, body_params=nil, query_params=nil)
     response = connection.send(http_method) do |request|
       request.url path(path_params), query(query_params)
-      request.body = body(body_params)
+      request.body = body(body_params).to_json
     end
     JSON.parse response.body
   end
