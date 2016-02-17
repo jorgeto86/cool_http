@@ -1,5 +1,5 @@
-module Languages
-  module Language
+module Comments
+  module Comments
 
     private
 
@@ -8,7 +8,7 @@ module Languages
     end
 
     def path(params=nil)
-      "/api/v1/languages/#{params[:id]}"
+      "/comments"
     end
   end
 end
