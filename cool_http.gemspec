@@ -8,7 +8,7 @@ Gem::Specification.new do |s|
   s.email       = 'jorgeto86@gmail.com'
   s.files       = `git ls-files`.split("\n")
   s.homepage    = 'https://github.com/jorgeto86/cool_http'
-  s.lincense    = 'MIT'
+  s.license    = 'MIT'
 
   s.add_dependency "faraday",  '~> 0.9.2'
 end
