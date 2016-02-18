@@ -19,6 +19,9 @@ end
 ```
 
 ## Clients and Requests
+The client is encapsulated in a class. Requests are encapsulated in modules.
+Declared methods in a client are all requests. However, declare methos in modules
+are only for his corresponding request.
 
 ### Required method:
 
@@ -44,16 +47,19 @@ clients
   |--- comments_client.rb # Comments client
 ```
 
-This example allows do test requests to a Rest API (http://jsonplaceholder.typicode.com/)
+This example allows do test requests to a Rest API (http://jsonplaceholder.typicode.com/).
 
 ```ruby
 # Comments client. Clients have to inherit from cool_http
 class CommentsClient < CoolHttp
 
+  # This url will be use for all request because it is declared in client.
   def url
     "http://jsonplaceholder.typicode.com"
   end
 
+  # This path will be use for all request least show request. This is because
+  # show has his own path
   def path(params=nil)
     "/comments/"
   end
@@ -90,6 +96,7 @@ module Comments
       :get
     end
 
+    # Path only to show request
     def path(params=nil)
       "/comments/#{params[:id]}"
     end
