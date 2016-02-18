@@ -20,7 +20,7 @@ class CoolHttp
 private
 
   def body(params)
-    NO_BODY
+    EMPTY
   end
 
   def path(params)
@@ -36,17 +36,17 @@ private
   end
 
   def connection
-    @connection ||= Faraday.new(default_connection_options)
+    @connection ||= Faraday.new(default_connection.merge(connection_options))
   end
 
-  def default_connection_options
+  def default_connection
     {
       url: url,
       headers: {
         content_type: 'application/json',
         accept: 'application/json'
       }
-    }.merge(connection_options)
+    }
   end
 
   def module_name(action)
