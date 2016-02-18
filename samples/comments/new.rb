@@ -7,10 +7,6 @@ module Comments
       :post
     end
 
-    def path(params=nil)
-      "/comments/"
-    end
-
     def body(params=nil)
       {
         postId: 1,
