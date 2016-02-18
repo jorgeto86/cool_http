@@ -47,6 +47,7 @@ clients
 This example allows do test requests to a Rest API (http://jsonplaceholder.typicode.com/)
 
 ```ruby
+# Comments client. Clients have to inherit from cool_http
 class CommentsClient < CoolHttp
 
   def url
@@ -58,6 +59,7 @@ class CommentsClient < CoolHttp
   end
 end
 
+# Request to create a comment
 module Comments
   module New
 
@@ -78,6 +80,7 @@ module Comments
   end
 end
 
+# Request to show a comment
 module Comments
   module Show
 
@@ -94,6 +97,7 @@ module Comments
   end
 end
 
+# Request for all comments
 module Comments
   module Comments
 
