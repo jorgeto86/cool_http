@@ -10,9 +10,9 @@ module Comments
     def body(params=nil)
       {
         postId: 1,
-        name: "test",
-        email: "test@gardner.biz",
-        body: "hola"
+        name: params[:name],
+        email: params[:email],
+        body: params[:body]
       }
     end
   end
