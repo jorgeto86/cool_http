@@ -1,7 +1,6 @@
 require 'faraday'
 
 class CoolHttp
-  NO_BODY = nil
   NO_PATH = ''
   EMPTY = {}
 
