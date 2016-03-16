@@ -1,5 +1,3 @@
-(Readme: Working at...)
-
 # Cool HTTP
 
 ## Installation
@@ -46,7 +44,7 @@ app
 
 This example allows do test requests to a Rest API (http://jsonplaceholder.typicode.com/).
 
-## Creating requests
+### Creating requests
 
 ```ruby
 # Comments client. Clients have to inherit from cool_http
@@ -117,7 +115,7 @@ module Comments
 end
 ```
 
-## Requesting
+### Requesting
 To do a request, creates a client object with module corresponding to the request
 and call `perform` method. This accepts 3 params.
 
