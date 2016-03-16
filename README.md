@@ -1,4 +1,4 @@
-# Cool HTTP
+# Cool_HTTP
 
 ## Installation
 ```ruby
